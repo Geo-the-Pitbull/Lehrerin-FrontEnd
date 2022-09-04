@@ -1,0 +1,96 @@
+<div class="bg-image">
+
+  <app-navbar2></app-navbar2>
+
+  <br><br>
+
+  <div class="list row" style="margin-right: 550x;">
+
+      <!-- Search by Name -->
+      &#160; &#160; &#160; &#160; 
+      <div class="col-md-8 m-auto">
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search Notes by Student name"
+            [(ngModel)]="student_name"
+          />
+          <div class="input-group-append">
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              (click)="searchNotes()"
+              style="background-color: red; color: white;"  
+            >
+              Search
+            </button>
+          </div>
+        </div>
+        <br><br>
+      </div>
+
+      <div>
+        <p style="font-weight: bolder; font-style: italic; margin-left: 208px; font-size: 20px; color: black">Show Notes then select a note for its details.</p>
+      </div>
+      <br><br><br>
+      
+      <div class="col-md-6">
+        <h4 style="font-weight: bold; color: blue; font-size: 32px;">Notes</h4>
+
+        <button (click) = "toggleDisplay()" 
+                style="margin-right: 870px; font-size: 16px; width: 150px; outline: none; border: none; background: orange; color: #fff;"
+                class="m-0 btn"
+                >
+          {{isChange?"Show Notes":"Hide Notes"}}
+        </button>
+        <br><br>
+
+        <ul *ngIf = "isDisplay" class="list-group"> 
+          <li
+            class="list-group-item"
+            *ngFor="let note of notes | paginate: {
+              itemsPerPage: listSize,
+              currentPage: page,
+              totalItems: count}; let i = index "
+            [class.active]="i == currentIndex"
+            (click)="setActiveNote(note, i)"
+          >
+            <b style="font-size: 18px;">{{ note.student_name }}</b> <br>
+            <p style="font-size: 14px; text-align: end;">{{ note.student_group}} / {{ note.activity_description}}</p>
+          </li>
+          <br>
+
+          <button class="m-0 btn btn-sm btn-danger" (click)="removeAllNotes()" style="opacity: 0.7; width: 40%;">
+            Discard All Notes
+          </button>
+
+
+          <div class="text-end">
+            <pagination-controls
+              previousLabel = "Prev"
+              nextLabel = "Next"
+              (pageChange)="onListDataChange($event)"
+              style="color: #fff;"
+            >
+            </pagination-controls>
+          </div>
+
+        </ul>
+        <br>
+      </div>
+
+      <div class="col-md-6">
+        <app-note-details
+          [viewMode]="true"
+          [currentNote]="currentNote"
+        ></app-note-details>
+      </div>
+
+  </div>
+  
+</div>
+<br>
+
+<app-footer></app-footer>
+

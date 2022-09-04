@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg">
+
+  <a href="#" class="navbar-brand" style="margin-left: 520px;">
+      <img style="width: 280px; height: 100px" src="/assets/img/Lehrerin Logo.png" alt="">
+  </a>
+
+  &#160; &#160; &#160; &#160; &#160; &#160;  
+
+  <div class="navbar-nav" style="margin-right: 420px;">
+
+    <button class="nav-item m-2 p-0 btn btn-sm btn-warning notes" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+      <a routerLink="/notes" class="nav-link" style="font-size: 34px; font-family: 'Bungee Shade';">NOTES</a>
+    </button>
+
+    &#160; &#160; &#160; &#160; &#160; &#160;  
+
+    <button class="nav-item m-4 p-0 btn btn-sm" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" style="border-radius: 50px; background-color:darkkhaki;">
+      <a routerLink="/add-note" class="nav-link" style="font-size: 16px;">
+          Add a New Note
+      </a>
+    </button>
+
+    &#160; &#160; &#160; &#160; &#160; &#160; &#160;
+
+    <div class="icon-box no-gutter">
+      <i class='bx bxs-log-out-circle'>
+        <h5> Log Out</h5>
+      </i>
+    </div>
+
+  </div>
+
+</nav>

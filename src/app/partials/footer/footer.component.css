@@ -1,0 +1,57 @@
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #11245A;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+}
+
+.logo-text {
+    text-transform: none;
+    font-size: 34px;
+    font-weight: 500;
+}
+
+.title-sm {
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.footer-top {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    /* margin-left: 30%;
+    margin-right: 30%; */
+}
+
+.footer-bottom {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+footer .footer-links a,
+footer .social-icons a {
+    color: #898fa1;
+}
+
+footer .social-icons a {
+    font-size: 24px;
+}
+
+footer .footer-links a {
+    display: block;
+    font-weight: 400;
+    letter-spacing: 1;
+    font-size: 12px;
+}
+
+footer .social-icons a:hover,
+footer .footer-links a:hover {
+    color: #E93B81;
+}

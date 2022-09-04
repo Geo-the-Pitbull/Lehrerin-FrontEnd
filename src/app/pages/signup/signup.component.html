@@ -1,0 +1,64 @@
+<body>
+    
+    <br>
+
+    <div>
+        <button  class="btn btn-info" style="width: 8%; margin-left: 20px;" routerLink="/home">Go Back Home</button>
+   </div>
+    
+    <form class="mx-auto my-auto">
+
+        <div class="imgcontainer">
+            <img style="width: 450px; height: 150px; cursor: pointer;" src="/assets/img/Lehrerin Logo.png" routerLink="/home" alt="">
+        </div>
+
+        <h4 class="text-center" style="font-weight: 300;">Create your new Account</h4>
+    
+
+        <div class="container">
+            
+            <label for="" style="font-weight: bold;">Username</label>
+            <input type="text" placeholder="Enter Username">
+
+            <label for="" style="font-weight: bold;">Email</label>
+            <input type="email" placeholder="Enter Email Address">
+
+            <label for="" style="font-weight: bold;">Phone</label>
+            <input type="text" placeholder="Enter Phone Number">
+        
+            <label for="" style="font-weight: bold;">Password</label>
+            <input type="password" placeholder="Enter Password">
+
+            <div class="form-check form-switch py-1 d-flex justify-content-start">
+                    <input class="form-check-input ml-auto" 
+                        type="checkbox" 
+                        role="switch" 
+                        id="flexSwitchCheckDefault" 
+                        style="transform: scale(1.2);"
+                    >
+                    &#160; &#160;
+                    <label class="form-check-label" 
+                        for="flexSwitchCheckDefault" 
+                        id="AucTu">
+                        Remember me
+                    </label>
+            </div>
+
+                <p class="text-end" style="font-style: italic; font-size: 14px;">
+                    <b>By creating an account you agree to our</b> 
+                    <a href="#" style="color:dodgerblue; text-decoration: none;">Terms & Privacy</a>.
+                </p>
+                    
+            <div class="container d-flex justify-content-center mt-0">
+                <button type="submit" class="btn btn-success" style="width: 35%;">Sign Up</button>
+                <button type="button" class="cancelbtn" style="width: 35%;">Cancel</button>
+            </div>
+
+        </div> 
+
+    </form>
+  
+    <br><br>
+    <app-footer></app-footer>
+
+</body>

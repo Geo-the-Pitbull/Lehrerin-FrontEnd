@@ -1,0 +1,24 @@
+.submit-form {
+    width: 500px;
+    padding-bottom: 0;
+    margin-left: 700px;
+}
+
+label{
+    font-weight: bold;
+}
+
+input {
+    width: 55%;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    outline: none;
+    background: transparent;
+}
+
+textarea {
+    border: 1px solid #ccc;
+    outline: none;
+    background: transparent;
+}
