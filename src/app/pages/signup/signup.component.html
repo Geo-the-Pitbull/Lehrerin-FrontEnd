@@ -6,7 +6,7 @@
         <button  class="btn btn-info" style="width: 8%; margin-left: 20px;" routerLink="/home">Go Back Home</button>
    </div>
     
-    <form class="mx-auto my-auto">
+    <form class="mx-auto my-auto" #registrationForm="ngForm" (submit)="signupTeachers(registrationForm.value)">
 
         <div class="imgcontainer">
             <img style="width: 450px; height: 150px; cursor: pointer;" src="/assets/img/Lehrerin Logo.png" routerLink="/home" alt="">
@@ -17,17 +17,17 @@
 
         <div class="container">
             
-            <label for="" style="font-weight: bold;">Username</label>
-            <input type="text" placeholder="Enter Username">
+            <label for="" style="font-weight: bold;">Name</label>
+            <input type="text" placeholder="Enter Username" name="name" ngModel>
 
             <label for="" style="font-weight: bold;">Email</label>
-            <input type="email" placeholder="Enter Email Address">
+            <input type="email" placeholder="Enter Email Address" name="email" ngModel>
 
             <label for="" style="font-weight: bold;">Phone</label>
-            <input type="text" placeholder="Enter Phone Number">
+            <input type="text" placeholder="Enter Phone Number" name="phone" ngModel>
         
             <label for="" style="font-weight: bold;">Password</label>
-            <input type="password" placeholder="Enter Password">
+            <input type="password" placeholder="Enter Password" name="password" ngModel>
 
             <div class="form-check form-switch py-1 d-flex justify-content-start">
                     <input class="form-check-input ml-auto" 

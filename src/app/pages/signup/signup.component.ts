@@ -1,18 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {UserService} from 'src/app/_services/user.service';
+import {Users} from 'src/app/_models/users.model';
+import {Router} from '@angular/router';
 
-
-@Component({
-  selector: 'app-signup',
-  templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
-})
+@Component({selector: 'app-signup', templateUrl: './signup.component.html', styleUrls: ['./signup.component.css']})
 export class SignupComponent implements OnInit {
 
-  
-  constructor() { }
+    users : Users = {
+        name: '',
+        email: '',
+        phone: '',
+        password: ''
+    };
 
-  ngOnInit(): void {
-  }
+    constructor(private userService : UserService, private router : Router) {}
 
-  
+    ngOnInit(): void {}
+
+    signupTeachers(data : any): void {
+        this.userService.registerTeachers(data).subscribe((data : any) => {
+            console.log(data);
+            this.router.navigate(["/home"]);
+        });
+    }
 }
