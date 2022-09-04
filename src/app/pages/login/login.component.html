@@ -1,10 +1,8 @@
 <body>
-    
-    <br>
 
-   <div>
-        <button  class="btn btn-info" style="width: 8%; margin-left: 20px;" routerLink="/home">Go Back Home</button>
-   </div>
+   <!-- <div>
+        <button  class="btn btn-info" style="width: 8%;" routerLink="/home">Go Back Home</button>
+   </div> -->
     
     <form  class="mx-auto my-auto" #loginForm="ngForm" (submit)="authoriseTeachers(loginForm.value)">
         <div class="imgcontainer">
@@ -35,7 +33,7 @@
                 </label>
 
                 <div class="ms-auto">
-                    <span class="psw">Forgot &#160; <a href="#">password?</a></span>
+                    <span class="psw">Forgot &#160; <a href="#" style="color: #fff;">password?</a></span>
                 </div>
            </div>
                 
@@ -45,9 +43,8 @@
           </div>
         </div> 
     </form>
-
-    <br><br>
-
+    <br>
+    
     <app-footer></app-footer>
 
 </body>
