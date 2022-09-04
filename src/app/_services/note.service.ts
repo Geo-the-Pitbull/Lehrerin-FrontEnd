@@ -2,13 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of, tap, catchError } from 'rxjs';
 import { Note } from '../_models/note.model';
+import { environment } from 'src/environments/environment';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class NoteService {
 
-  baseUrl: string = 'http://localhost:4040/api/Lehrerin/Notes';
+  baseUrl: string = `${environment.baseUrl}/Lehrerin/Notes`;
   httpHeaders = new HttpHeaders().set('Content-Type', 'application/json');
 
   constructor(private http: HttpClient) { }
