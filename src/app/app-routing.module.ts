@@ -12,8 +12,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'signup', component: SignupComponent},
   { path: 'login', component: LoginComponent},
-
-  { path: '', redirectTo: '/notes', pathMatch: 'full'},
+  
   { path: 'notes', component: NotesListComponent},
   { path: 'notes/:id', component: NoteDetailsComponent},
   { path: 'add-note', component: AddNoteComponent},

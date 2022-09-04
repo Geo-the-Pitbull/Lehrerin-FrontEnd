@@ -24,8 +24,10 @@ export class LoginComponent implements OnInit {
     this.userService.loginTeachers(data).subscribe(
       (result: any)=>{
         console.log(result);
-        localStorage.setItem('token', result.token);
-        this.router.navigate(["/notes"])
+        if(result.token) {
+          window.localStorage.setItem('token', result.token);
+          this.router.navigate(["/notes"])
+        } 
       }
     )
     console.log(data);

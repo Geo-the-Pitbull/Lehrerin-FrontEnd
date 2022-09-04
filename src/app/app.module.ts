@@ -7,7 +7,6 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './partials/footer/footer.component';
-import { NavbarComponent } from './partials/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
@@ -20,7 +19,6 @@ import { Navbar2Component } from './partials/navbar2/navbar2.component';
   declarations: [
     AppComponent,
     FooterComponent,
-    NavbarComponent,
     HomeComponent,
     LoginComponent,
     SignupComponent,

@@ -14,8 +14,10 @@ export class Navbar2Component implements OnInit {
   }
 
   logoutUsers(): void {
-    localStorage.removeItem('token')
-    this.router.navigate(["/home"])
+    if(localStorage.getItem('username')) {
+      localStorage.removeItem('username')
+    }
+    this.router.navigate(["/login"])
   }
 
 }
