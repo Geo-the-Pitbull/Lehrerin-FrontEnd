@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 })
 export class NoteService {
 
-  baseUrl: string = `${environment.baseUrl}/Lehrerin/Notes`;
+  baseUrl: string = `${environment.baseUrl}api/Lehrerin/Notes`;
   httpHeaders = new HttpHeaders().set('Content-Type', 'application/json');
 
   constructor(private http: HttpClient) { }

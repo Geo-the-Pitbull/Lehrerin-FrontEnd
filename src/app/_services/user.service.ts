@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class UserService {
 
-  REST_API_URL = `${environment.baseUrl}/api`
+  REST_API_URL = `${environment.baseUrl}api`
   httpHeaders = new HttpHeaders().set('Content-Type', 'application/json');
 
   constructor(private http: HttpClient) { }
