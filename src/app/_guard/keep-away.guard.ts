@@ -12,8 +12,8 @@ export class KeepAwayGuard implements CanActivate {
   constructor(private router: Router) {}
 
   canActivate(): boolean{
-    if(!localStorage.getItem('username')){
-      this.router.navigate(['/login'])
+    if(!localStorage.getItem('password')){
+      this.router.navigate(['/home'])
       return false
     }
     return true
