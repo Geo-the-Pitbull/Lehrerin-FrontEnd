@@ -6,6 +6,7 @@ import { NotesListComponent } from './components/notes-list/notes-list.component
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { KeepAwayGuard } from './_guard/keep-away.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -13,9 +14,9 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent},
   { path: 'login', component: LoginComponent},
   
-  { path: 'notes', component: NotesListComponent},
-  { path: 'notes/:id', component: NoteDetailsComponent},
-  { path: 'add-note', component: AddNoteComponent},
+  { path: 'notes', component: NotesListComponent, canActivate: [KeepAwayGuard] },
+  { path: 'notes/:id', component: NoteDetailsComponent, canActivate: [KeepAwayGuard] },
+  { path: 'add-note', component: AddNoteComponent, canActivate: [KeepAwayGuard] },
 ];
 
 @NgModule({
