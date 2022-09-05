@@ -61,19 +61,22 @@
           </li>
           <br>
 
-          <div class="text-end">
-            <pagination-controls
+          <div>
+            <div class="text-start">
+              <button class="m-0 btn btn-sm btn-danger" (click)="removeAllNotes()" style="opacity: 0.7; width: 40%;">
+                Discard All Notes
+              </button>
+            </div>
+            <div class="text-end">
+              <pagination-controls
               previousLabel = "Prev"
               nextLabel = "Next"
               (pageChange)="onListDataChange($event)"
               style="color: #fff; font-weight: bolder;"
-            >
-            </pagination-controls>
+              >
+              </pagination-controls>
+            </div>
           </div>
-
-          <button class="m-0 btn btn-sm btn-danger" (click)="removeAllNotes()" style="opacity: 0.7; width: 40%;">
-            Discard All Notes
-          </button>
 
         </ul>
         <br> <br>

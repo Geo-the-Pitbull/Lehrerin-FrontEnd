@@ -1,148 +1,148 @@
 <div>
 
   <!-- NAVIGATION -->
-    <nav class="navbar fixed-top navbar-expand-lg nav-bar-light" style="background-image: linear-gradient(to right, #de6262, #ffb88c)">
-      <div class="container-fluid" style="margin-left: 8%; margin-right: 8%;">
-        <!-- <a class="navbar-brand logo-text" href="#">LeHrERiN.</a> -->
-        <img style="width: 250px; height: 80px" src="/assets/img/Lehrerin Logo.png" alt="">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+  <nav class="navbar fixed-top navbar-expand-lg nav-bar-light" style="background-image: linear-gradient(to right, #de6262, #ffb88c)">
+    <div class="container-fluid" style="margin-left: 8%; margin-right: 8%;">
+      <!-- <a class="navbar-brand logo-text" href="#">LeHrERiN.</a> -->
+      <img style="width: 250px; height: 80px" src="/assets/img/Lehrerin Logo.png" alt="">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" (click)="scroll(home)">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="scroll(services)">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="scroll(upcoming_products)">Upcoming Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="scroll(features)">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="scroll(team)">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="scroll(testimonials)">Testimonials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="scroll(clients)">Clients</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="scroll(contact)">Contact Us</a>
+          </li>
+          
+        </ul>
+        <button class="btn btn-brand ms-lg-3" style="border-radius: 10px;">
+          <a style="color: #fff; text-decoration: none;" routerLink="/signup">Join Us</a>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-  
-            <li class="nav-item">
-              <a class="nav-link" (click)="scroll(home)">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" (click)="scroll(services)">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" (click)="scroll(upcoming_products)">Upcoming Products</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" (click)="scroll(features)">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" (click)="scroll(team)">Team</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" (click)="scroll(testimonials)">Testimonials</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" (click)="scroll(clients)">Clients</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" (click)="scroll(contact)">Contact Us</a>
-            </li>
-            
-          </ul>
-          <button class="btn btn-brand ms-lg-3" style="border-radius: 10px;">
-            <a style="color: #fff; text-decoration: none;" routerLink="/signup">Join Us</a>
-          </button>
-          <button class="btn btn-primary ms-lg-3" style="border-radius: 10px; margin-left: 30px;">
-            <a style="color: #fff; text-decoration: none;" routerLink="/login">Log In</a>
-          </button>
-        </div>
-      </div> 
-    </nav>
+        <button class="btn btn-primary ms-lg-3" style="border-radius: 10px; margin-left: 30px;">
+          <a style="color: #fff; text-decoration: none;" routerLink="/login">Log In</a>
+        </button>
+      </div>
+    </div> 
+  </nav>
   
   <!-- HOME & HERO -->
-    <section id="home" #home>
-      <div class="container text-center">
-        <div class="row justify-content-center">
-          <div class="col-md-10" data-aos="flip-left">
-            <br><br><br><br><br><br><br><br>
-            <h1 class="text-white display-4">ALL GREAT TEACHERS USE OUR TOOLS.</h1>
-            <p class="text-white">
-              "Better than a thousand days of diligent study is one day with a great teacher."
-              "True teachers use themselves as bridges over which they invite their students to cross then,
-              having facilitated their crossing joyfully collaspe, encouraging them to create bridges of their own."
-            </p>
-            <a href="#" class="btn btn-success">Learn More</a>
-          </div>
+  <section id="home" #home>
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-md-10" data-aos="flip-left">
+          <br><br><br><br><br><br><br><br>
+          <h1 class="text-white display-4">ALL GREAT TEACHERS USE OUR TOOLS.</h1>
+          <p class="text-white">
+            "Better than a thousand days of diligent study is one day with a great teacher."
+            "True teachers use themselves as bridges over which they invite their students to cross then,
+            having facilitated their crossing joyfully collaspe, encouraging them to create bridges of their own."
+          </p>
+          <a href="#" class="btn btn-success">Learn More</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
   
   <!-- SERVICES -->
-    <section id="services" #services style="padding-top: 160px;">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 section-intro">
-            <h1>LeHrERiN Services</h1>
-            <div class="hline"></div>
-          </div>
-        </div>
-        <div class="row">
-  
-          <!-- Web, UI & Graphic Designing -->
-          <div class="col-lg-4 col-sm-6 p-4">
-            <div class="icon-box">
-              <i class='bx bxl-sketch'></i>
-            </div>
-            <h4 class="title-sm mt-4">Web, UI & Graphic Designing</h4>
-            <p> We create beautiful websites and web tools that are graphically superb and one of a kind.
-                For our teachers only the best and nothing else is an option. 
-            </p>
-          </div>
-  
-          <!-- API, Sever & Data Management -->
-          <div class="col-lg-4 col-sm-6 p-4">
-            <div class="icon-box">
-              <i class='bx bxs-data'></i>
-            </div>
-            <h4 class="title-sm mt-4">API, Server & Data Management</h4>
-            <p> With all our teacher tools, we also create and mainatain their required API and Server systems. 
-                Data handling and managing is also one of our top most priorites.
-            </p>
-          </div>
-  
-          <!-- Software Applications Development & Depolyment -->
-          <div class="col-lg-4 col-sm-6 p-4">
-            <div class="icon-box">
-              <i class='bx bxs-devices'></i>
-            </div>
-            <h4 class="title-sm mt-4">Software Applications Development & Depolyment</h4>
-            <p> Also apart of all our packages that we offer our teachers, we will also provide a standalone
-                application for all their devices, whether it be a desktop, tablet or cellphone.
-            </p>
-          </div>
-  
-           <!-- Cyber Security -->
-          <div class="col-lg-4 col-sm-6 p-4">
-            <div class="icon-box">
-              <i class='bx bx-shield-quarter'></i>
-            </div>
-            <h4 class="title-sm mt-4">Cyber Security & Data Encryption</h4>
-            <p> We also provide the best cyber security and data encryption services that ensures that all our teacher tools
-                are properly safe guarded so that they can function at their optimal levels.
-            </p>
-          </div>
-  
-          <!-- Consultations -->
-          <div class="col-lg-4 col-sm-6 p-4">
-            <div class="icon-box">
-              <i class='bx bxs-label'></i>
-            </div>
-            <h4 class="title-sm mt-4"> Expert Consultations</h4>
-            <p> Our experts here at Lehrerin are also fully capable of offering expert insights and advice as it relates to our tools.
-            </p>
-          </div>
-  
-           
-           <!-- <div class="col-lg-4 col-sm-6 p-4">
-            <div class="icon-box">
-              <i class='bx bxs-label'></i>
-            </div>
-            <h4 class="title-sm mt-4">Coming Soon</h4>
-            <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-            </p>
-          </div> -->
+  <section id="services" #services style="padding-top: 160px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 section-intro">
+          <h1>LeHrERiN Services</h1>
+          <div class="hline"></div>
         </div>
       </div>
-    </section>
+      <div class="row">
+
+        <!-- Web, UI & Graphic Designing -->
+        <div class="col-lg-4 col-sm-6 p-4">
+          <div class="icon-box">
+            <i class='bx bxl-sketch'></i>
+          </div>
+          <h4 class="title-sm mt-4">Web, UI & Graphic Designing</h4>
+          <p> We create beautiful websites and web tools that are graphically superb and one of a kind.
+              For our teachers only the best and nothing else is an option. 
+          </p>
+        </div>
+
+        <!-- API, Sever & Data Management -->
+        <div class="col-lg-4 col-sm-6 p-4">
+          <div class="icon-box">
+            <i class='bx bxs-data'></i>
+          </div>
+          <h4 class="title-sm mt-4">API, Server & Data Management</h4>
+          <p> With all our teacher tools, we also create and mainatain their required API and Server systems. 
+              Data handling and managing is also one of our top most priorites.
+          </p>
+        </div>
+
+        <!-- Software Applications Development & Depolyment -->
+        <div class="col-lg-4 col-sm-6 p-4">
+          <div class="icon-box">
+            <i class='bx bxs-devices'></i>
+          </div>
+          <h4 class="title-sm mt-4">Software Applications Development & Depolyment</h4>
+          <p> Also apart of all our packages that we offer our teachers, we will also provide a standalone
+              application for all their devices, whether it be a desktop, tablet or cellphone.
+          </p>
+        </div>
+
+          <!-- Cyber Security -->
+        <div class="col-lg-4 col-sm-6 p-4">
+          <div class="icon-box">
+            <i class='bx bx-shield-quarter'></i>
+          </div>
+          <h4 class="title-sm mt-4">Cyber Security & Data Encryption</h4>
+          <p> We also provide the best cyber security and data encryption services that ensures that all our teacher tools
+              are properly safe guarded so that they can function at their optimal levels.
+          </p>
+        </div>
+
+        <!-- Consultations -->
+        <div class="col-lg-4 col-sm-6 p-4">
+          <div class="icon-box">
+            <i class='bx bxs-label'></i>
+          </div>
+          <h4 class="title-sm mt-4"> Expert Consultations</h4>
+          <p> Our experts here at Lehrerin are also fully capable of offering expert insights and advice as it relates to our tools.
+          </p>
+        </div>
+
+          
+          <!-- <div class="col-lg-4 col-sm-6 p-4">
+          <div class="icon-box">
+            <i class='bx bxs-label'></i>
+          </div>
+          <h4 class="title-sm mt-4">Coming Soon</h4>
+          <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          </p>
+        </div> -->
+      </div>
+    </div>
+  </section>
   
   <!-- UPCOMING PRODUCTS -->
   <section id="upcoming products" #upcoming_products class="row g-0 py-0">
@@ -215,7 +215,7 @@
   </section>
   
   <!-- FEATURES -->
-  <section id="features" #features style="padding-top: 220px;">
+  <section id="features" #features style="padding-top: 175px;">
     <div class="container">
        <div class="row">
           <div class="col-12 section-intro">

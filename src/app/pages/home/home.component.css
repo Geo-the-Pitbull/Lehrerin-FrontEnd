@@ -155,7 +155,7 @@ section {
 .upcoming_products-item img,
 .upcoming_products-item .upcoming_products-overlay {
     transition: all 0.4s ease;
-    width: 720px;
+    width: 780px;
 }
  
 .upcoming_products-overlay {
@@ -214,8 +214,8 @@ section {
 }
 
 .feature h5 {
-    font-size: 18px;
-    font-family: 'Crafty Girls';
+    font-size: 24px;
+    font-family: 'Poiret One';
 }
 
 .team-member {
