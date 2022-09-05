@@ -12,7 +12,7 @@ export class KeepAwayGuard implements CanActivate {
   constructor(private router: Router) {}
 
   canActivate(): boolean{
-    if(!!localStorage.getItem('token')){
+    if(!localStorage.getItem('token')){
       this.router.navigate(['/home'])
       return false
     }
