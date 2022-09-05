@@ -14,9 +14,9 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent},
   { path: 'login', component: LoginComponent},
   
-  { path: 'notes', component: NotesListComponent, canActivate: [KeepAwayGuard] },
-  { path: 'notes/:id', component: NoteDetailsComponent, canActivate: [KeepAwayGuard] },
-  { path: 'add-note', component: AddNoteComponent, canActivate: [KeepAwayGuard] },
+  { path: 'notes', component: NotesListComponent},
+  { path: 'notes/:id', component: NoteDetailsComponent},
+  { path: 'add-note', component: AddNoteComponent},
 ];
 
 @NgModule({
