@@ -78,7 +78,7 @@ section {
 }
 
 #home {
-    background: linear-gradient(rgba(17, 36, 90, 0.881), rgba(17, 36, 90, 0.659)), url('/assets/img/hero_img.jpg');
+    background: linear-gradient(rgba(17, 36, 90, 0.538), rgba(17, 36, 90, 0.518)), url('/assets/img/hero_img.jpg');
     min-height: 100vh;
     background-size: cover;
     background-position: center;
@@ -124,6 +124,7 @@ section {
 .section-intro h1 {
     font-weight: 500;
     font-family: 'Give You Glory';
+    font-size: 52px;
 }
 
 .section-intro .hline {
@@ -155,7 +156,7 @@ section {
 .upcoming_products-item img,
 .upcoming_products-item .upcoming_products-overlay {
     transition: all 0.4s ease;
-    width: 780px;
+    width: 760px;
 }
  
 .upcoming_products-overlay {

@@ -3,6 +3,12 @@
    <!-- <div>
         <button  class="btn btn-info" style="width: 8%;" routerLink="/home">Go Back Home</button>
    </div> -->
+
+   <br> <br>
+
+    <div style="margin-left: 750px">
+        <span>Not a registered user? &#160; <a style="color: blue; font-weight: normal;" routerLink="/signup">Click here to Sign Up</a></span>
+    </div>
     
     <form  class="mx-auto my-auto" #loginForm="ngForm" (submit)="authoriseTeachers(loginForm.value)">
         <div class="imgcontainer">
@@ -17,6 +23,7 @@
       
           <label for="psw" style="font-weight: bold;">Password</label>
           <input type="password" placeholder="Enter Password" name="password" ngModel>
+          <br> <br>
 
           <div class="form-check form-switch py-1 d-flex justify-content-start">
                 <input class="form-check-input ml-auto" 
@@ -39,11 +46,11 @@
                 
           <div class="container d-flex justify-content-center mt-0">
             <button type="submit" class="btn btn-success" style="width: 35%;">Login</button>
-            <button type="button" class="cancelbtn" style="width: 35%;">Cancel</button>
+            <!-- <button type="button" class="cancelbtn" style="width: 35%;">Cancel</button> -->
           </div>
         </div> 
     </form>
-    <br>
+    <br><br>
     
     <app-footer></app-footer>
 

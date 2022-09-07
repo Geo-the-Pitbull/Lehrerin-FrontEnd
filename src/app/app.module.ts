@@ -14,6 +14,7 @@ import { AddNoteComponent } from './components/add-note/add-note.component';
 import { NoteDetailsComponent } from './components/note-details/note-details.component';
 import { NotesListComponent } from './components/notes-list/notes-list.component';
 import { Navbar2Component } from './partials/navbar2/navbar2.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { Navbar2Component } from './partials/navbar2/navbar2.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

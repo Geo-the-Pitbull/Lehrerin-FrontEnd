@@ -83,145 +83,149 @@
   <p>Please click on a Note...</p>
 </div>
 
-<div *ngIf="currentNote.id" style="margin-left: 1050px;">
-<h4 *ngIf="!viewMode" style="margin-top: -950px; font-size: 32px;">You are Editing 
-  <br>
-  <span style="color: pink; font-style: italic; font-size: 42px;">{{currentNote.student_name}}</span>
-</h4>
+<div *ngIf="currentNote.id" style="margin-left: 1050px; opacity: 0.3;">
+  <h4 *ngIf="!viewMode" style="margin-top: -900px; font-size: 32px;">You are Editing 
+    <br>
+    <span style="color: purple; font-style: italic; font-size: 42px;">{{currentNote.student_name}}</span>
+  </h4>
+  <div>
+    <i class='bx bxs-lock-open' style="font-size: 78px;"></i>
+  </div>
 </div>
 
 <ng-template #editable>
-  <app-navbar2></app-navbar2>
-  <br><br>
-  <h5 style="text-align: center; font-size: 22px; color: red; font-weight: 200;">Kindly ensure that the data is correct to the best of your knowledge.</h5>
-  <br>
 
-  <div *ngIf="currentNote.id" class="edit-form" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; padding: 40px; background-color:chocolate; margin-left:425px; margin-top: 20px;">
-    
-
-    <form>
-
-      <div style="display:flex; flex-direction: row; justify-content: flex-start; align-items: flex-end">
-        <label for="">Current Date :</label>
-        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
-        <input type="date"
-              class="form-control"
-              id="dt"
-              required
-              [(ngModel)]="currentNote.note_date"
-              name="date"
-              placeholder="example - 2022-08-30" 
-        />
-      </div>
-
-      <br>
-
-      <div style="display:flex; flex-direction: row; justify-content: flex-start; align-items: flex-end">
-        <label for="">Current Student/Group :</label>
-        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
-        <input type="text"
-              class="form-control"
-              id="stnm"
-              required
-              [(ngModel)]="currentNote.student_name"
-              name="student name"
-        />
-      </div>
-
-      <br>
-
-      <div style="display:flex; flex-direction: row; justify-content: flex-start; align-items: flex-end">
-        <label for="">Current Class :</label>
-        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
-        <input type="text"
-              class="form-control"
-              id="cl"
-              required
-              [(ngModel)]="currentNote.student_group"
-              name="class"
-        />
-      </div>
-
-      <br>
-
-      <div style="display:flex; flex-direction: row; justify-content: flex-start; align-items: flex-end">
-        <label for="">Current Teacher :</label>
-        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
-        <input type="text"
-              class="form-control"
-              id="tnm"
-              required
-              [(ngModel)]="currentNote.teacher_name"
-              name="teacher name"
-        />
-      </div>
-
-      <br>
-
-      <div style="display:flex; flex-direction: row; justify-content: flex-start; align-items: flex-end">
-        <label for="">Current Activity :</label>
-        &#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
-        <input type="text"
-              class="form-control"
-              id="aty"
-              required
-              [(ngModel)]="currentNote.activity_description"
-              name="activity"
-        />
-      </div>
-
-      <br>
-
-      <div style="display:flex; flex-direction: row; justify-content: flex-start; align-items: flex-end">
-        <label for="">Current Mark or Score :</label>
-        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
-        <input type="text"
-              class="form-control"
-              id="ms"
-              required
-              [(ngModel)]="currentNote.mark_or_score"
-              name="mark or score"
-        />
-      </div>
-
-      <br>
-
-      <div style="display:flex; flex-direction: row; justify-content: flex-start; align-items: flex-end">
-        <label for="">Current Comment :</label>
-        &#160; &#160; 
-        <textarea name="comment" id="cmt" cols="40" rows="6"
-          required
-          [(ngModel)]="currentNote.comments"
-        >
-        </textarea>
-      </div>
+  <div class="bg-image">
+    <app-navbar2></app-navbar2>
+    <br><br>
+    <br>
+  
+    <div *ngIf="currentNote.id" class="edit-form" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; padding: 40px; background-color:chocolate; margin-left:425px; margin-top: 20px;">
       
-    </form>
-
-    <br>
-
-    <button class="btn btn-danger p-2" (click)="deleteNote()" style="font-size: 14px;">
-      Delete Note
-    </button>
-
-    &#160; 
-    
-    <button
-      type="submit"
-      class="btn btn-info p-2"
-      (click)="updateNote()"
-      style="font-size: 14px;"
-    >
-      Update Note
-    </button>
-    <br>
-
-    <p>{{ message }}</p>
+  
+      <form>
+  
+        <div style="display:flex; flex-direction: row; justify-content: flex-start; align-items: flex-end">
+          <label for="">Current Date :</label>
+          &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+          <input type="date"
+                class="form-control"
+                id="dt"
+                required
+                [(ngModel)]="currentNote.note_date"
+                name="date"
+          />
+        </div>
+  
+        <br>
+  
+        <div style="display:flex; flex-direction: row; justify-content: flex-start; align-items: flex-end">
+          <label for="">Current Student/Group :</label>
+          &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+          <input type="text"
+                class="form-control"
+                id="stnm"
+                required
+                [(ngModel)]="currentNote.student_name"
+                name="student name"
+          />
+        </div>
+  
+        <br>
+  
+        <div style="display:flex; flex-direction: row; justify-content: flex-start; align-items: flex-end">
+          <label for="">Current Class :</label>
+          &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+          <input type="text"
+                class="form-control"
+                id="cl"
+                required
+                [(ngModel)]="currentNote.student_group"
+                name="class"
+          />
+        </div>
+  
+        <br>
+  
+        <div style="display:flex; flex-direction: row; justify-content: flex-start; align-items: flex-end">
+          <label for="">Current Teacher :</label>
+          &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+          <input type="text"
+                class="form-control"
+                id="tnm"
+                required
+                [(ngModel)]="currentNote.teacher_name"
+                name="teacher name"
+          />
+        </div>
+  
+        <br>
+  
+        <div style="display:flex; flex-direction: row; justify-content: flex-start; align-items: flex-end">
+          <label for="">Current Activity :</label>
+          &#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+          <input type="text"
+                class="form-control"
+                id="aty"
+                required
+                [(ngModel)]="currentNote.activity_description"
+                name="activity"
+          />
+        </div>
+  
+        <br>
+  
+        <div style="display:flex; flex-direction: row; justify-content: flex-start; align-items: flex-end">
+          <label for="">Current Mark or Score :</label>
+          &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+          <input type="text"
+                class="form-control"
+                id="ms"
+                required
+                [(ngModel)]="currentNote.mark_or_score"
+                name="mark or score"
+          />
+        </div>
+  
+        <br>
+  
+        <div style="display:flex; flex-direction: row; justify-content: flex-start; align-items: flex-end">
+          <label for="">Current Comment :</label>
+          &#160; &#160; 
+          <textarea name="comment" id="cmt" cols="40" rows="6"
+            required
+            [(ngModel)]="currentNote.comments"
+          >
+          </textarea>
+        </div>
+        
+      </form>
+  
+      <br>
+  
+      <button class="btn btn-danger p-2" (click)="deleteNote()" style="font-size: 14px;">
+        Delete Note
+      </button>
+  
+      &#160; 
+      
+      <button
+        type="submit"
+        class="btn btn-info p-2"
+        (click)="updateNote()"
+        style="font-size: 14px;"
+      >
+        Update Note
+      </button>
+      <br>
+  
+      <p>{{ message }}</p>
+    </div>
+  
+    <br><br>
+    <hr>
+ 
   </div>
-
-  <br><br>
-  <hr>
-  <br><br>
 
   <app-footer></app-footer>
 

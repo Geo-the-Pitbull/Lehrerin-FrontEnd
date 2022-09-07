@@ -1,4 +1,5 @@
 export class Note {
+
     id?: any;
     note_date?: string;
     student_name?: string;
@@ -7,4 +8,5 @@ export class Note {
     activity_description?: string;
     mark_or_score?: string;
     comments?: string;
+    
 }
