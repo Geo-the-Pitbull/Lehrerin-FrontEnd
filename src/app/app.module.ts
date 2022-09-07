@@ -16,6 +16,7 @@ import { NotesListComponent } from './components/notes-list/notes-list.component
 import { Navbar2Component } from './partials/navbar2/navbar2.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+
 @NgModule({
   declarations: [
     AppComponent,

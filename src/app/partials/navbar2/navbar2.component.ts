@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './navbar2.component.html',
   styleUrls: ['./navbar2.component.css']
 })
+
 export class Navbar2Component implements OnInit {
 
   constructor(private router: Router) { }
@@ -14,9 +15,13 @@ export class Navbar2Component implements OnInit {
   }
 
   logoutUsers(): void {
-    if(localStorage.getItem('username')) {
-      localStorage.removeItem('username')
+
+    if(localStorage.getItem('token')) {
+
+      localStorage.removeItem('token')
+
     }
+    
     this.router.navigate(["/login"])
   }
 

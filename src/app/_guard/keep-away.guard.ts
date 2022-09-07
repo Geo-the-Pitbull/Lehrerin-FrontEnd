@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import { Router, CanActivate } from '@angular/router';
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class KeepAwayGuard implements CanActivate {
 
     constructor(private _router: Router ) {}
  
-    canActivate(): boolean {
+    canActivate() {
 
-      if(!!localStorage.getItem('token')){
-        this._router.navigate(['/home'])
-        return false
+      if(!localStorage.getItem('token')){
+        return this._router.parseUrl('/home')
+        // return false
       }
 
       return true
