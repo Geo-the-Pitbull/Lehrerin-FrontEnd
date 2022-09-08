@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { NoteService } from 'src/app/_services/note.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Note } from 'src/app/_models/note.model';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-note-details',
@@ -26,6 +27,7 @@ export class NoteDetailsComponent implements OnInit {
 
   constructor(
     private noteService: NoteService,
+    private router: Router,
     private route: ActivatedRoute,
   ) { }
 
@@ -48,13 +50,18 @@ export class NoteDetailsComponent implements OnInit {
   }
 
   updateNote(): void {
-    this.message = '';
+    // this.message = '';
     if (confirm('Are you sure you want to perform this operation ?') == true) {
       this.noteService.update(this.currentNote.id, this.currentNote)
       .subscribe({
         next: (res) => {
           console.log(res);
-          this.message = res.message ? res.message : 'This Note was updated successfully!';
+          // this.message = res.message ? res.message : 'This Note was updated successfully!';
+          this.router.navigate(["/notes"])
+          Swal.fire({
+            title: "Note was updated successfully",
+            icon: "success",
+          })
         },
         error: (e) => console.error(e)
       });
@@ -67,7 +74,12 @@ export class NoteDetailsComponent implements OnInit {
       .subscribe({
         next: (res) => {
           console.log(res);
-          this.message = res.message ? res.message : 'This Note was deleted successfully!';
+          // this.message = res.message ? res.message : 'This Note was deleted successfully!';
+          this.router.navigate(["/notes"])
+          Swal.fire({
+            title: "Note was deleted successfully",
+            icon: "success",
+          })
         },
         error: (e) => console.error(e)
       });

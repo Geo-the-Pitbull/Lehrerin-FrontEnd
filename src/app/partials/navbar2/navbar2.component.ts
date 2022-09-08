@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-navbar2',
@@ -23,6 +24,11 @@ export class Navbar2Component implements OnInit {
     }
     
     this.router.navigate(["/login"])
+
+    Swal.fire({
+      title: "Teacher Successfully Logged Out",
+      icon: "success",
+    })
   }
 
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Note } from 'src/app/_models/note.model';
 import { NoteService } from 'src/app/_services/note.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-notes-list',
@@ -73,7 +74,11 @@ export class NotesListComponent implements OnInit {
       .subscribe({
         next: (res) => {
           console.log(res);
-          this.message = res.message ? res.message : 'All Notes were deleted successfully!';
+          // this.message = res.message ? res.message : 'All Notes were deleted successfully!';
+          Swal.fire({
+            title: "All Notes were removed",
+            icon: "success",
+          })
           this.refreshListOfNotes();
         },
         error: (e) => console.error(e)
