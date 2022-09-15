@@ -15,7 +15,6 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   
   { path: 'notes', component: NotesListComponent, canActivate: [KeepAwayGuard] },
-  // { path: 'notes', component: NotesListComponent },
   { path: 'notes/:id', component: NoteDetailsComponent, canActivate: [KeepAwayGuard] },
   { path: 'add-note', component: AddNoteComponent, canActivate: [KeepAwayGuard] },
 ];

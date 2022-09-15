@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {UserService} from 'src/app/_services/user.service';
 import {Users} from 'src/app/_models/users.model';
 import {Router} from '@angular/router';
-import Swal from 'sweetalert2';
 
 @Component({selector: 'app-signup', templateUrl: './signup.component.html', styleUrls: ['./signup.component.css']})
 export class SignupComponent implements OnInit {
