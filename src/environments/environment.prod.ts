@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseUrl: "https://lehrerin-server.herokuapp.com/"
+  baseUrl: "https://lehrerin-server.vercel.app/"
 };
